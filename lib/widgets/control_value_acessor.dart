@@ -26,7 +26,7 @@ abstract class ControlValueAcessor<T,V> extends StatelessWidget {
   }
 
   ChangeNotifier get changeNotifier{
-    if(_control != null) return _control;
+    if(_control != null) return _control!;
     if(formGroup != null && name != null){
       return formGroup!.control(name!);
     }
@@ -34,7 +34,7 @@ abstract class ControlValueAcessor<T,V> extends StatelessWidget {
   }
 
   FormControl<T,V> get control{
-    if(_control != null) return _control;
+    if(_control != null) return _control!;
     if(formGroup != null && name != null){
       return formGroup!.control(name!);
     }
@@ -42,7 +42,7 @@ abstract class ControlValueAcessor<T,V> extends StatelessWidget {
   }
 
   TextEditingController get textController{
-    if(_control != null) return _control.controller;
+    if(_control != null) return _control!.controller;
     if(formGroup != null && name != null){
       return formGroup!.control(name!).controller;
     }
@@ -50,7 +50,7 @@ abstract class ControlValueAcessor<T,V> extends StatelessWidget {
   }
 
   V get value{
-    if(_control != null) return _control.value;
+    if(_control != null) return _control!.value;
     if(formGroup != null && name != null){
       return formGroup!.control(name!).value;
     }
@@ -58,7 +58,7 @@ abstract class ControlValueAcessor<T,V> extends StatelessWidget {
   }
 
   set value(V value){
-    if(_control != null) return _control.setValue(value);
+    if(_control != null) return _control!.setValue(value);
     if(formGroup != null && name != null){
       return formGroup!.control(name!).setValue(value);
     }
@@ -66,7 +66,7 @@ abstract class ControlValueAcessor<T,V> extends StatelessWidget {
   }
 
   bool get isValid{
-    if(_control != null) return _control.valid;
+    if(_control != null) return _control!.valid;
     if(formGroup != null && name != null){
       return formGroup!.control(name!).valid;
     }
@@ -74,7 +74,7 @@ abstract class ControlValueAcessor<T,V> extends StatelessWidget {
   }
 
   String? get error{
-    if(_control != null) return validator?.call(_control.value);
+    if(_control != null) return validator?.call(_control!.value);
     if(formGroup != null && name != null){
       return formGroup!.control(name!).error;
     }
