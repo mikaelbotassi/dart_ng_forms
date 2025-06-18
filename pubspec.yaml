@@ -1,6 +1,6 @@
 name: dart_ng_forms
-description: A sample command-line application.
-version: 1.0.0
+description: Reactive Forms architecture in Flutter, heavily inspired by Angular's FormGroup/FormControl pattern, with a focus on type safety, reusability and integration with TextEditingController.
+version: 0.1.0
 repository: https://github.com/mikaelbotassi/dart_ng_forms
 issue_tracker: https://github.com/mikaelbotassi/dart_ng_forms/issues
 homepage: https://github.com/mikaelbotassi/dart_ng_forms
@@ -14,12 +14,16 @@ topics:
   - reactive-forms
 
 environment:
-  sdk: ^3.7.0-323.0.dev
+  sdk: ">=3.0.0 <4.0.0"
+  flutter: ">=3.10.0"
 
-# Add regular dependencies here.
 dependencies:
-  # path: ^1.8.0
+  flutter:
+    sdk: flutter
+
+  result_dart: ^1.1.0
 
 dev_dependencies:
-  lints: ^5.0.0
-  test: ^1.24.0
+  flutter_test:
+    sdk: flutter
+  lints: ^3.0.0
