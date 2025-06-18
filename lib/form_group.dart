@@ -1,10 +1,8 @@
 import 'dart:async';
-
+import 'exceptions/validation_exception.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:result_dart/result_dart.dart';
-import 'package:sma_inspecao/app/domain/exceptions/app_validation_exception.dart';
-import 'package:sma_inspecao/app/plugins/reactive_forms_module/form_group/form_control.dart';
-
+import 'form_control/form_control.dart';
 import 'abstract_control.dart';
 
 abstract class FormGroup<M> extends AbstractControl<Map<String, dynamic>> {
@@ -118,7 +116,7 @@ abstract class FormGroup<M> extends AbstractControl<Map<String, dynamic>> {
     if(error == null){
       return Success(this);
     }
-    return Failure(AppValidationException(error));
+    return Failure(ValidationException(error));
   }
 
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'abstract_control.dart';
+import '../abstract_control.dart';
 import 'form_control_options.dart';
 
 class FormControl<T, V> extends AbstractControl<V> {
