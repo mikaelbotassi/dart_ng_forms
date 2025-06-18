@@ -4,7 +4,6 @@ version: 0.1.0
 repository: https://github.com/mikaelbotassi/dart_ng_forms
 issue_tracker: https://github.com/mikaelbotassi/dart_ng_forms/issues
 homepage: https://github.com/mikaelbotassi/dart_ng_forms
-publish_to: https://pub.dev
 
 topics:
   - forms
