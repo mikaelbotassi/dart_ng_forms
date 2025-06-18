@@ -39,6 +39,10 @@ if (loginForm.valid) {{
 }}
 ```
 
+### 🔧 Example
+
+You can find a complete working example in [example/main.dart](example/main.dart).
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

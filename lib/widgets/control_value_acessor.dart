@@ -1,4 +1,4 @@
-import '../dart_ng_forms.dart';
+import 'package:dart_ng_forms/dart_ng_forms.dart';
 import 'package:flutter/material.dart';
 
 abstract class ControlValueAcessor<T,V> extends StatelessWidget {
