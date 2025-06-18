@@ -1,4 +1,4 @@
-class FormControlOptions{
+class FormControlOptions {
   bool isRequired;
   bool isDisabled;
   bool isReadonly;
@@ -8,5 +8,4 @@ class FormControlOptions{
     this.isDisabled = false,
     this.isReadonly = false,
   });
-
 }

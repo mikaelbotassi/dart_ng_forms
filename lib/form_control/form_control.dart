@@ -55,7 +55,7 @@ class FormControl<T, V> extends AbstractControl<V> {
 
   @override
   void setValue(V val) {
-    if(options.isDisabled || options.isReadonly) {
+    if (options.isDisabled || options.isReadonly) {
       return; // Não permite alteração se estiver desabilitado ou somente leitura
     }
     if (valueNotifier is TextEditingController) {

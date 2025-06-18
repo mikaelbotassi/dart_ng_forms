@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.2] - 2025-06-18
+### Changed
+- Removed unused code.
+
 ## [0.2.1] - 2025-06-18
 ### Added
 - Added example case for `FormControl` and `FormGroup` usage in the example folder.

@@ -6,7 +6,8 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  final form = ExampleFormGroup(ExampleModel(id: 1, status: null, description: ''));
+  final form =
+      ExampleFormGroup(ExampleModel(id: 1, status: null, description: ''));
 
   @override
   Widget build(BuildContext context) {
