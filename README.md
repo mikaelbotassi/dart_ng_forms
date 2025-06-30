@@ -33,7 +33,7 @@ Add the dependency to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  dart_ng_forms: ^0.2.4
+  dart_ng_forms: ^0.2.5
 ```
 
 Import the package:

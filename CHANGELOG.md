@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.5] - 2025-06-30
+### Changed
+- revise README for clarity and structure; update features and examples.
+
 ## [0.2.4] - 2025-06-30
 ### Changed
 - Removed unused code.
