@@ -1,76 +1,62 @@
 import 'package:flutter/material.dart';
-import 'package:dart_ng_forms/dart_ng_forms.dart';
 
-void main() {
-  runApp(MyApp());
+import 'example_custom_text_field.dart';
+import 'example_form.dart';
+
+class ExampleFormScreen extends StatefulWidget {
+  const ExampleFormScreen({super.key});
+
+  @override
+  State<ExampleFormScreen> createState() => _ExampleFormScreenState();
 }
 
-class MyApp extends StatelessWidget {
-  final form =
-      ExampleFormGroup(ExampleModel(id: 1, status: null, description: ''));
+class _ExampleFormScreenState extends State<ExampleFormScreen> {
+  late ExampleForm form;
+
+  @override
+  void initState() {
+    super.initState();
+    form = ExampleForm();
+  }
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'dart_ng_forms Example',
-      home: Scaffold(
-        appBar: AppBar(title: Text('FormGroup Example')),
-        body: Column(
+    return Scaffold(
+      appBar: AppBar(title: const Text('Reactive Form Example')),
+      body: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
           children: [
-            TextField(
-              controller: form.textControl('description').controller,
-              decoration: InputDecoration(
-                labelText: 'Description',
-                errorText: form.textControl('description').error,
-              ),
+            // Campo Name
+            CustomTextField(
+              formGroup: form,
+              name: 'name',
             ),
+            const SizedBox(height: 16),
+            // Campo Email
+            CustomTextField(
+              formGroup: form,
+              name: 'email',
+            ),
+            const SizedBox(height: 32),
             ElevatedButton(
               onPressed: () {
-                print(form.toModel());
+                if (form.valid) {
+                  final data = form.toModel();
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(content: Text('Data: $data')),
+                  );
+                } else {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(content: Text('Form inválido')),
+                  );
+                }
               },
-              child: Text('Submit'),
+              child: const Text('Submit'),
             ),
           ],
         ),
       ),
     );
   }
-}
-
-class ExampleFormGroup extends FormGroup<ExampleModel> {
-  ExampleFormGroup(ExampleModel model)
-      : super({
-          'id': FormControl.create<int>(initialValue: model.id),
-          'status': FormControl.create<int?>(
-            initialValue: model.status,
-            validator: (value) => value == null ? 'Status is required' : null,
-          ),
-          'description': FormControl.text(initialValue: model.description),
-        });
-
-  @override
-  void fromModel(ExampleModel model) {
-    control<int, int>('id').setValue(model.id);
-    control<int?, int?>('status').setValue(model.status);
-    textControl('description').setValue(model.description ?? '');
-  }
-
-  @override
-  ExampleModel toModel() {
-    return ExampleModel(
-      id: control<int, int>('id').value,
-      status: control<int?, int?>('status').value,
-      description: textControl('description').value.isEmpty
-          ? null
-          : textControl('description').value,
-    );
-  }
-}
-
-class ExampleModel {
-  final int id;
-  final int? status;
-  final String? description;
-
-  ExampleModel({required this.id, this.status, this.description});
 }
