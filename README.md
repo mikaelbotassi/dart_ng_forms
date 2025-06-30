@@ -1,23 +1,39 @@
-# dart_ng_forms
+Claro! Aqui vai uma **versão revisada, clara, profissional e bem estruturada** do seu README com base em tudo que me mostrou:
 
-Reactive Forms architecture in Flutter, heavily inspired by Angular's `FormGroup`/`FormControl` pattern, 
-with a focus on type safety, reusability, and seamless integration with Flutter's `TextEditingController`.
+---
 
-## Features
+# dart\_ng\_forms
 
-- ⚙️ Strongly typed `FormControl<T, V>` and `FormGroup<T>` system
-- 🔄 Two-way binding with `TextEditingController`
-- ✅ Built-in validation support
-- 📦 Reusable and composable control logic
-- 📊 Observability through `ChangeNotifier`
+**A powerful reactive forms architecture for Flutter**, inspired by Angular’s `FormGroup` / `FormControl` pattern, with a strong focus on type safety, reusability, and seamless integration with Flutter’s `TextEditingController`.
 
-## Getting Started
+---
 
-Add the dependency in your `pubspec.yaml`:
+## ✨ Features
+
+* **Strongly Typed Controls**
+  Define `FormControl<T, V>` and `FormGroup<T>` with clear, type-safe APIs.
+
+* **Two-Way Binding**
+  Automatically synchronize form state and UI via `TextEditingController`.
+
+* **Validation Support**
+  Easily integrate validation logic and retrieve error messages.
+
+* **Composable and Reusable**
+  Compose nested form structures and reuse controls across your app.
+
+* **Reactive Observability**
+  All controls are `ChangeNotifier`s for efficient UI updates.
+
+---
+
+## 🚀 Getting Started
+
+Add the dependency to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  dart_ng_forms: ^0.1.0
+  dart_ng_forms: ^0.2.4
 ```
 
 Import the package:
@@ -26,23 +42,32 @@ Import the package:
 import 'package:dart_ng_forms/dart_ng_forms.dart';
 ```
 
-## Example
+---
+
+## 💡 Quick Example
+
+Create a form group and validate:
 
 ```dart
-final loginForm = LoginFormGroup({{
+final loginForm = LoginFormGroup({
   'email': FormControl.text(initialValue: ''),
   'password': FormControl.text(initialValue: ''),
-}});
+});
 
-if (loginForm.valid) {{
-  var data = loginForm.value;
-}}
+if (loginForm.valid) {
+  final data = loginForm.value;
+  // Process your form data
+}
 ```
 
-### 🔧 Example
+---
 
-You can find a complete working example in [example/main.dart](example/main.dart).
+## 🛠 Example Project
 
-## License
+A complete working example is available in [example/main.dart](example/main.dart).
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+---
+
+## 📄 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
