@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.4] - 2025-06-30
+### Changed
+- Removed unused code.
+
 ## [0.2.3] - 2025-06-30
 ### Added
 - Added complete `dartdoc` comments to all public API elements.
