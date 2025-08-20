@@ -1,7 +1,3 @@
-Claro! Aqui vai uma **versão revisada, clara, profissional e bem estruturada** do seu README com base em tudo que me mostrou:
-
----
-
 # dart\_ng\_forms
 
 **A powerful reactive forms architecture for Flutter**, inspired by Angular’s `FormGroup` / `FormControl` pattern, with a strong focus on type safety, reusability, and seamless integration with Flutter’s `TextEditingController`.
@@ -33,7 +29,7 @@ Add the dependency to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  dart_ng_forms: ^0.2.5
+  dart_ng_forms: ^0.2.6
 ```
 
 Import the package:
