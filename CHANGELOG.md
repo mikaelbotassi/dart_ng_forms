@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.7] - 2025-11-28
+### Changed
+- Added the possibility to insert new validations into FormControl after its creation.
+
 ## [0.2.6] - 2025-06-30
 ### Changed
 - revise README for clarity and structure.

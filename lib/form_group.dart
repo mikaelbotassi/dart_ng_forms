@@ -66,14 +66,14 @@ abstract class FormGroup<M> extends AbstractControl<Map<String, dynamic>> {
   /// Returns a [FormControl] with the given [name].
   ///
   /// Throws if the control does not exist or if it is a nested group.
-  FormControl<T, V> control<T, V>(String name) {
+  FormControl<T, T> control<T>(String name) {
     final ctrl = controls[name];
     if (ctrl == null) throw Exception('FormControl "$name" não encontrado');
     if (ctrl is FormGroup) {
       throw Exception(
           'O controle "$name" é um FormGroup, use group() para acessá-lo.');
     }
-    return ctrl as FormControl<T, V>;
+    return ctrl as FormControl<T, T>;
   }
 
   /// Returns a [FormControl] specialized for text input with the given [name].

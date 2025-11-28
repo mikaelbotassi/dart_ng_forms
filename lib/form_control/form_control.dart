@@ -16,7 +16,7 @@ class FormControl<T, V> extends AbstractControl<V> {
   final ValueNotifier<T> valueNotifier;
 
   /// The optional validator function to check the control's value.
-  final FormFieldValidator<V>? validator;
+  FormFieldValidator<V>? validator;
 
   /// Options to configure control state (required, disabled, readonly).
   final FormControlOptions options;
@@ -125,6 +125,13 @@ class FormControl<T, V> extends AbstractControl<V> {
 
   /// Sets whether the control is readonly.
   set isReadonly(bool v) => options.isReadonly = v;
+
+  /// Updates the validator function.
+  /// @param newValidator The new validator function to set.
+  void setValidator(FormFieldValidator<V>? newValidator) {
+    validator = newValidator;
+    notifyListeners();
+  }
 
   /// Disposes the [ValueNotifier].
   @override
