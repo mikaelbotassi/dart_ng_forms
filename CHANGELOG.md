@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.8] - 2025-12-15
+### Changed
+- Added an alias `TextControl` for `FormControl<TextEditingValue, String>` to simplify text control creation.
+
 ## [0.2.7] - 2025-11-28
 ### Changed
 - Added the possibility to insert new validations into FormControl after its creation.
@@ -9,6 +13,7 @@ All notable changes to this project will be documented in this file.
 ## [0.2.6] - 2025-06-30
 ### Changed
 - revise README for clarity and structure.
+- 
 ## [0.2.5] - 2025-06-30
 ### Changed
 - revise README for clarity and structure; update features and examples.
