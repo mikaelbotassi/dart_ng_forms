@@ -140,3 +140,5 @@ class FormControl<T, V> extends AbstractControl<V> {
     super.dispose();
   }
 }
+
+typedef TextControl = FormControl<TextEditingValue, String>;
