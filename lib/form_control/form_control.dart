@@ -141,4 +141,5 @@ class FormControl<T, V> extends AbstractControl<V> {
   }
 }
 
+/// A type alias for a text-based [FormControl].
 typedef TextControl = FormControl<TextEditingValue, String>;
