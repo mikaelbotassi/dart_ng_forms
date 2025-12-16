@@ -1,6 +1,6 @@
 name: dart_ng_forms
 description: Reactive Forms architecture in Flutter inspired by Angular's FormGroup/FormControl pattern and integration with TextEditingController.
-version: 0.3.0
+version: 0.3.1
 repository: https://github.com/mikaelbotassi/dart_ng_forms.git
 issue_tracker: https://github.com/mikaelbotassi/dart_ng_forms/issues
 homepage: https://github.com/mikaelbotassi/dart_ng_forms

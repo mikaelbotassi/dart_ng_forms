@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78192f81-09cb-40f1-976c-648764c49853" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/example/example_custom_text_field.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/example_custom_text_field.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/example_form.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/example_form.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/abstract_control.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/abstract_control.dart" afterDir="false" />
+    <list default="true" id="78192f81-09cb-40f1-976c-648764c49853" name="Changes" comment="feat: update FormControl and ControlValueAccessor to improve state management and notifications">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/form_control/form_control.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/form_control/form_control.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/form_control/form_control_options.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/form_control/form_control_options.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/form_group.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/form_group.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/widgets/control_value_acessor.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widgets/control_value_acessor.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,21 +26,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "mikaelbotassi"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;mikaelbotassi&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/mikaelbotassi/dart_ng_forms.git",
-    "accountId": "c538c639-599a-4dac-906c-93a2b38b7448"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/mikaelbotassi/dart_ng_forms.git&quot;,
+    &quot;accountId&quot;: &quot;c538c639-599a-4dac-906c-93a2b38b7448&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="36wH0KrRMNLjJtVO2LxMo658Amt" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -58,6 +53,7 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
@@ -67,10 +63,15 @@
     "git-widget-placeholder": "main",
     "io.flutter.project.isFirstOpen": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/desenvolvedor07/Desktop/solucoes/dart_ng_forms",
+    "last_opened_file_path": "C:/Users/desenvolvedor07/Desktop/solucoes/dart_ng_forms/lib/helpers",
     "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\desenvolvedor07\Desktop\solucoes\dart_ng_forms\lib\helpers" />
+    </key>
+  </component>
   <component name="SwiftWorkspaceSettings">
     <option name="detectedToolchain" value="true" />
   </component>
@@ -82,7 +83,28 @@
       <option name="presentableId" value="Default" />
       <updated>1765910489627</updated>
     </task>
+    <task id="LOCAL-00001" summary="feat: update FormControl and ControlValueAccessor to improve state management and notifications">
+      <option name="closed" value="true" />
+      <created>1765914743107</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1765914743107</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: update FormControl and ControlValueAccessor to improve state management and notifications">
+      <option name="closed" value="true" />
+      <created>1765914755944</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1765914755944</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: update FormControl and ControlValueAccessor to improve state management and notifications" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: update FormControl and ControlValueAccessor to improve state management and notifications" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

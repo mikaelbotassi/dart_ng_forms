@@ -1,3 +1,4 @@
+import 'package:dart_ng_forms/helpers/text_control_binder.dart';
 import 'package:flutter/material.dart';
 import '../abstract_control.dart';
 import 'form_control_options.dart';
@@ -10,8 +11,10 @@ import 'form_control_options.dart';
 /// It can be used with simple values or with a [TextEditingController] for text fields.
 ///
 /// - [T] is the type stored in the [ValueNotifier].
-/// - [V] is the external representation of the value.
 class FormControl<T> extends AbstractControl<T> {
+
+  TextControlBinder? _controllerBinder;
+
   /// The underlying value notifier holding the current value.
   final ValueNotifier<T> valueNotifier;
 
@@ -90,9 +93,24 @@ class FormControl<T> extends AbstractControl<T> {
     if(notify) notifyListeners();
   }
 
+  TextEditingController get controller {
+    if (this is! FormControl<String>) {
+      throw UnsupportedError('controller only supports FormControl<String>');
+    }
+
+    _controllerBinder ??= TextControlBinder(
+      control: this as FormControl<String>,
+      controller: TextEditingController(text: (this as FormControl<String>).value),
+    );
+
+    return _controllerBinder!.controller;
+  }
+
   /// Disposes the [ValueNotifier].
   @override
   void dispose() {
+    _controllerBinder?.dispose();
+    _controllerBinder = null;
     valueNotifier.dispose();
     super.dispose();
   }
