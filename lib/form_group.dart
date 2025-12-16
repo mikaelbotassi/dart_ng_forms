@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'exceptions/validation_exception.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:result_dart/result_dart.dart';
 import 'form_control/form_control.dart';
 import 'abstract_control.dart';
@@ -66,27 +65,14 @@ abstract class FormGroup<M> extends AbstractControl<Map<String, dynamic>> {
   /// Returns a [FormControl] with the given [name].
   ///
   /// Throws if the control does not exist or if it is a nested group.
-  FormControl<T, T> control<T>(String name) {
+  FormControl<T> control<T>(String name) {
     final ctrl = controls[name];
     if (ctrl == null) throw Exception('FormControl "$name" não encontrado');
     if (ctrl is FormGroup) {
       throw Exception(
           'O controle "$name" é um FormGroup, use group() para acessá-lo.');
     }
-    return ctrl as FormControl<T, T>;
-  }
-
-  /// Returns a [FormControl] specialized for text input with the given [name].
-  ///
-  /// Throws if the control does not exist or is not a text control.
-  FormControl<TextEditingValue, String> textControl(String name) {
-    final ctrl = controls[name];
-    if (ctrl == null) throw Exception('FormControl "$name" não encontrado');
-    if (ctrl is FormGroup) {
-      throw Exception(
-          'O controle "$name" é um FormGroup, use group() para acessá-lo.');
-    }
-    return ctrl as FormControl<TextEditingValue, String>;
+    return ctrl as FormControl<T>;
   }
 
   /// Returns the nested [FormGroup] with the given [name].
@@ -105,13 +91,13 @@ abstract class FormGroup<M> extends AbstractControl<Map<String, dynamic>> {
 
   /// Sets the values of all controls from the provided map [val].
   @override
-  void setValue(Map<String, dynamic> val) {
+  void setValue(Map<String, dynamic> val, {bool notify = true}) {
     val.forEach((key, v) {
       if (controls.containsKey(key)) {
-        controls[key]!.setValue(v);
+        controls[key]!.setValue(v, notify: notify);
       }
     });
-    notifyListeners();
+    if(notify) notifyListeners();
   }
 
   /// Recursively returns the raw value of all controls and nested groups.

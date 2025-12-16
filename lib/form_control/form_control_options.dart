@@ -6,17 +6,17 @@ class FormControlOptions {
   /// Whether the control is marked as required.
   ///
   /// Defaults to `false`.
-  bool isRequired;
+  bool required;
 
   /// Whether the control is disabled (user cannot edit).
   ///
   /// Defaults to `false`.
-  bool isDisabled;
+  bool disabled;
 
   /// Whether the control is readonly (user can see but not change).
   ///
   /// Defaults to `false`.
-  bool isReadonly;
+  bool readonly;
 
   /// Creates a new [FormControlOptions] instance.
   ///
@@ -31,8 +31,8 @@ class FormControlOptions {
   /// );
   /// ```
   FormControlOptions({
-    this.isRequired = false,
-    this.isDisabled = false,
-    this.isReadonly = false,
+    this.required = false,
+    this.disabled = false,
+    this.readonly = false,
   });
 }

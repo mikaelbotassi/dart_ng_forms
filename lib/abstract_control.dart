@@ -12,5 +12,5 @@ abstract class AbstractControl<T> extends ChangeNotifier {
   String? get error;
 
   /// Sets the value of the control.
-  void setValue(T val);
+  void setValue(T val, {bool notify = true});
 }

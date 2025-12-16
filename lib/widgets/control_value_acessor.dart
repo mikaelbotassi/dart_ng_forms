@@ -1,180 +1,145 @@
 import 'package:dart_ng_forms/dart_ng_forms.dart';
 import 'package:flutter/material.dart';
 
-/// An abstract base class to build custom form input widgets that connect
-/// a [FormControl] or a [FormGroup] to the widget tree.
-///
-/// This is inspired by Angular's `ControlValueAccessor`, providing a clean
-/// interface to bind reactive controls to Flutter widgets.
-///
-/// Use this class as a base for widgets that need to:
-/// - Read and write values to/from a [FormControl].
-/// - Integrate with validation and disabled/read-only state.
-/// - Listen to changes in the form control's state.
-///
-/// Example usage:
-/// ```dart
-/// class CustomInput extends ControlValueAcessor<String, String> {
-///   const CustomInput({super.key, required super.formGroup, required super.name});
-///
-///   @override
-///   Widget build(BuildContext context) {
-///     return TextField(
-///       controller: textController,
-///       decoration: InputDecoration(errorText: error),
-///       onChanged: (val) => value = val,
-///     );
-///   }
-/// }
-/// ```
-abstract class ControlValueAcessor<T, V> extends StatelessWidget {
-  /// Whether this field is enabled.
-  final bool enabled;
+mixin ControlValueAcessor<T> on Widget {
 
-  /// Whether this field is required.
-  final bool required;
-
-  /// The [FormGroup] this accessor binds to (if using a named control).
-  final FormGroup? formGroup;
-
-  /// The name of the control inside the [FormGroup].
-  final String? name;
-
-  /// The validator function for this control.
-  final FormFieldValidator? _validator;
-
-  /// The [FormControl] instance, if passed directly.
-  final FormControl<T, V>? _control;
-
-  /// Creates a [ControlValueAcessor].
-  ///
-  /// You must provide either:
-  /// - [control], or
-  /// - [formGroup] and [name].
-  const ControlValueAcessor({
-    super.key,
-    this.enabled = true,
-    this.required = false,
-    this.formGroup,
-    this.name,
-    FormControl<T, V>? control,
-    FormFieldValidator? validator,
-  })  : _validator = validator,
-        _control = control;
-
+  ///We Recommend to use this declaration on widgets:
+  /*
   @override
-  Widget build(BuildContext context) {
-    return Container();
+  final FormControl<T, T>? control;
+  @override
+  final bool enabled;
+  @override
+  final FormGroup<dynamic>? formGroup;
+  @override
+  final String? name;
+  @override
+  final bool required;
+  @override
+  final FormFieldValidator<T>? validator;
+  */
+
+  bool get disabled;
+  bool get required;
+  FormGroup? get formGroup;
+  String? get name;
+  FormFieldValidator<T>? get validator;
+  FormControl<T>? get control;
+  ChangeNotifier get changeNotifier{
+    assert((){
+      if(control == null && (formGroup == null || name == null)){
+        throw FlutterError('ControlValueAcessor: model or formGroup and name must be provided to access Change Notifier');
+      }
+      return true;
+    }());
+    if(control != null) return control!;
+    return formGroup!.control<T>(name!);
   }
 
-  /// Returns the [ChangeNotifier] associated with this control.
-  ///
-  /// Throws if neither [control] nor [formGroup]+[name] were provided.
-  ChangeNotifier get changeNotifier {
-    if (_control != null) return _control!;
-    if (formGroup != null && name != null) {
-      return formGroup!.control(name!);
+  ValueNotifier<T> get valueNotifier{
+    assert((){
+      if(control == null && (formGroup == null || name == null)){
+        throw FlutterError('ControlValueAcessor: model or formGroup and name must be provided to access Value Notifier');
+      }
+      return true;
+    }());
+    if(control != null) return control!.valueNotifier;
+    return formGroup!.control<T>(name!).valueNotifier;
+  }
+
+  FormControl<T> get formControl{
+    assert((){
+      if(control == null && (formGroup == null || name == null)){
+        throw FlutterError('ControlValueAcessor: model or formGroup and name must be provided to access FormControl');
+      }
+      return true;
+    }());
+    if(control != null) return control!;
+    return formGroup!.control<T>(name!);
+  }
+
+  T get value{
+    assert((){
+      if(control == null && (formGroup == null || name == null)){
+        throw FlutterError('ControlValueAcessor: model or formGroup and name must be provided to access Value');
+      }
+      return true;
+    }());
+    if(control != null) return control!.value;
+    return formGroup!.control(name!).value;
+  }
+
+  setValue(T value, {bool notify = true}){
+    assert((){
+      if(control == null && (formGroup == null || name == null)){
+        throw FlutterError('ControlValueAcessor: model or formGroup and name must be provided to set value ');
+      }
+      return true;
+    }());
+    if(control != null) return control!.setValue(value, notify: notify);
+    return formGroup!.control<T>(name!).setValue(value, notify: notify);
+  }
+
+  bool get isValid{
+    assert((){
+      if(control == null && (formGroup == null || name == null)){
+        throw FlutterError('ControlValueAcessor: model or formGroup and name must be provided to verify if value is valid');
+      }
+      return true;
+    }());
+    if(control != null) return control!.valid;
+    return formGroup!.control(name!).valid;
+  }
+
+  String? get error{
+    assert((){
+      if(control == null && (formGroup == null || name == null)){
+        throw FlutterError('ControlValueAcessor: model or formGroup and name must be provided to access error');
+      }
+      return true;
+    }());
+    if(control != null) return validator?.call(control!.value);
+    return formGroup!.control(name!).error;
+  }
+
+  bool get isDisabled{
+    assert((){
+      if(control == null && (formGroup == null || name == null)){
+        throw FlutterError('ControlValueAcessor: model or formGroup and name must be provided to verify if value is disabled');
+      }
+      return true;
+    }());
+    if(control != null) return control!.disabled;
+    if(formGroup != null && name != null){
+      return formGroup!.control(name!).disabled;
     }
-    throw Exception(
-      'ControlValueAcessor: control or formGroup and name must be provided',
-    );
+    return disabled;
   }
 
-  /// Returns the [FormControl] for this accessor.
-  ///
-  /// Throws if neither [control] nor [formGroup]+[name] were provided.
-  FormControl<T, V> get control {
-    if (_control != null) return _control!;
-    if (formGroup != null && name != null) {
-      return formGroup!.control(name!);
-    }
-    throw Exception(
-      'ControlValueAcessor: control or formGroup and name must be provided',
-    );
-  }
-
-  /// Returns the [TextEditingController] if this control is a text control.
-  ///
-  /// Throws if not a text control.
-  TextEditingController get textController {
-    if (_control != null) return _control!.controller;
-    if (formGroup != null && name != null) {
-      return formGroup!.control(name!).controller;
-    }
-    throw Exception(
-      'ControlValueAcessor: control or formGroup and name must be provided',
-    );
-  }
-
-  /// Returns the current value of this control.
-  ///
-  /// Throws if neither [control] nor [formGroup]+[name] were provided.
-  V get value {
-    if (_control != null) return _control!.value;
-    if (formGroup != null && name != null) {
-      return formGroup!.control(name!).value;
-    }
-    throw Exception(
-      'ControlValueAcessor: control or formGroup and name must be provided',
-    );
-  }
-
-  /// Updates the value of this control.
-  ///
-  /// Throws if neither [control] nor [formGroup]+[name] were provided.
-  set value(V value) {
-    if (_control != null) return _control!.setValue(value);
-    if (formGroup != null && name != null) {
-      return formGroup!.control(name!).setValue(value);
-    }
-    throw Exception(
-      'ControlValueAcessor: control or formGroup and name must be provided',
-    );
-  }
-
-  /// Whether this control is currently valid.
-  bool get isValid {
-    if (_control != null) return _control!.valid;
-    if (formGroup != null && name != null) {
-      return formGroup!.control(name!).valid;
-    }
-    throw Exception(
-      'ControlValueAcessor: control or formGroup and name must be provided',
-    );
-  }
-
-  /// Returns the validation error message, if any.
-  String? get error {
-    if (_control != null) return validator?.call(_control!.value);
-    if (formGroup != null && name != null) {
-      return formGroup!.control(name!).error;
-    }
-    throw Exception(
-      'ControlValueAcessor: control or formGroup and name must be provided',
-    );
-  }
-
-  /// Whether this control is disabled.
-  bool get isDisabled {
-    if (formGroup != null && name != null) {
-      return formGroup!.control(name!).isDisabled;
-    }
-    return !enabled;
-  }
-
-  /// Whether this control is required.
-  bool get isRequired {
-    if (formGroup != null && name != null) {
-      return formGroup!.control(name!).isRequired;
+  bool get isRequired{
+    assert((){
+      if(control == null && (formGroup == null || name == null)){
+        throw FlutterError('ControlValueAcessor: model or formGroup and name must be provided to verify if value is required');
+      }
+      return true;
+    }());
+    if(formGroup != null && name != null){
+      return formGroup!.control(name!).required;
     }
     return required;
   }
 
-  /// The validator function for this control.
-  FormFieldValidator? get validator {
-    if (formGroup != null && name != null) {
+  FormFieldValidator<T>? get formValidator{
+    assert((){
+      if(control == null && (formGroup == null || name == null)){
+        throw FlutterError('ControlValueAcessor: model or formGroup and name must be provided to access validator');
+      }
+      return true;
+    }());
+    if(formGroup != null && name != null){
       return formGroup!.control(name!).validator;
     }
-    return _validator;
+    return validator;
   }
+
 }
