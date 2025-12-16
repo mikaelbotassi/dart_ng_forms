@@ -112,19 +112,28 @@ class FormControl<T, V> extends AbstractControl<V> {
   bool get isRequired => options.isRequired;
 
   /// Sets whether the control is marked as required.
-  set isRequired(bool v) => options.isRequired = v;
+  set isRequired(bool v){
+    options.isRequired = v;
+    notifyListeners();
+  }
 
   /// Whether the control is disabled.
   bool get isDisabled => options.isDisabled;
 
   /// Sets whether the control is disabled.
-  set isDisabled(bool v) => options.isDisabled = v;
+  set isDisabled(bool v){
+    options.isDisabled = v;
+    notifyListeners();
+  }
 
   /// Whether the control is readonly.
   bool get isReadonly => options.isReadonly;
 
   /// Sets whether the control is readonly.
-  set isReadonly(bool v) => options.isReadonly = v;
+  set isReadonly(bool v){
+    options.isReadonly = v;
+    notifyListeners();
+  }
 
   /// Updates the validator function.
   /// @param newValidator The new validator function to set.

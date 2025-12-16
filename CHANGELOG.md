@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.9] - 2025-12-16
+### Changed
+- Updated `FormControl` properties `isRequired`, `isDisabled`, and `isReadonly` to notify listeners when their values are changed.
+
 ## [0.2.8] - 2025-12-15
 ### Changed
 - Added an alias `TextControl` for `FormControl<TextEditingValue, String>` to simplify text control creation.
