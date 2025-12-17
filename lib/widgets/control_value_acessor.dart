@@ -142,4 +142,17 @@ mixin ControlValueAcessor<T> on Widget {
     return validator;
   }
 
+  TextEditingController get controller{
+    assert((){
+      if(control == null && (formGroup == null || name == null)){
+        throw FlutterError('ControlValueAcessor: model or formGroup and name must be provided to access controller');
+      }
+      if(formControl is! FormControl<String>){
+        throw FlutterError('ControlValueAcessor: controller only supports FormControl<String>');
+      }
+      return true;
+    }());
+    return formControl.controller;
+  }
+
 }

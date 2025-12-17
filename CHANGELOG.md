@@ -2,12 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.0] - 2025-12-17
+### BREAK CHANGES
+- Binder the controller with FormControl<String>
+
 ## [0.3.1] - 2025-12-16
-### Changed
+### PROBLEMÁTIC
 - Updated FormControl to return TextEditingController when needed.
 
 ## [0.3.0] - 2025-12-16
-### Changed
+### PROBLEMÁTIC
 - Updated `FormControl` properties `isRequired`, `isDisabled`, and `isReadonly` to notify listeners when their values are changed.
 
 ## [0.2.9] - 2025-12-16
