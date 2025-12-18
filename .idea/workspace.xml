@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78192f81-09cb-40f1-976c-648764c49853" name="Changes" comment="feat: update FormControl and ControlValueAccessor to support FormControl&lt;String&gt; and improve controller access">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/form_group.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/form_group.dart" afterDir="false" />
-    </list>
+    <list default="true" id="78192f81-09cb-40f1-976c-648764c49853" name="Changes" comment="feat: add FormRules for declarative and dependent field validation" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -115,14 +112,23 @@
       <option name="project" value="LOCAL" />
       <updated>1765972894502</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="feat: add FormRules for declarative and dependent field validation">
+      <option name="closed" value="true" />
+      <created>1766080674678</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1766080674678</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: update FormControl and ControlValueAccessor to improve state management and notifications" />
     <MESSAGE value="feat: update FormControl to return TextEditingController and improve synchronization with text input" />
     <MESSAGE value="feat: update FormControl and ControlValueAccessor to support FormControl&lt;String&gt; and improve controller access" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: update FormControl and ControlValueAccessor to support FormControl&lt;String&gt; and improve controller access" />
+    <MESSAGE value="feat: add FormRules for declarative and dependent field validation" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add FormRules for declarative and dependent field validation" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

@@ -106,6 +106,11 @@ class FormControl<T> extends AbstractControl<T> {
     return _controllerBinder!.controller;
   }
 
+  void refresh(){
+    notifyListeners();
+    valueNotifier.value = value;
+  }
+
   /// Disposes the [ValueNotifier].
   @override
   void dispose() {
