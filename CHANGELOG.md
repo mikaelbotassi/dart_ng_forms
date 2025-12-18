@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.0] - 2025-12-18
+### NEW FEATURE
+- Add FormRules for declarative and dependent field validation
+
 ## [1.0.0] - 2025-12-17
 ### BREAK CHANGES
 - Binder the controller with FormControl<String>

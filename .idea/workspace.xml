@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78192f81-09cb-40f1-976c-648764c49853" name="Changes" comment="feat: update FormControl to return TextEditingController and improve synchronization with text input">
+    <list default="true" id="78192f81-09cb-40f1-976c-648764c49853" name="Changes" comment="feat: update FormControl and ControlValueAccessor to support FormControl&lt;String&gt; and improve controller access">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/form_control/form_control.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/form_control/form_control.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/widgets/control_value_acessor.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widgets/control_value_acessor.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/form_group.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/form_group.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,13 +107,22 @@
       <option name="project" value="LOCAL" />
       <updated>1765921037641</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat: update FormControl and ControlValueAccessor to support FormControl&lt;String&gt; and improve controller access">
+      <option name="closed" value="true" />
+      <created>1765972894502</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1765972894502</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: update FormControl and ControlValueAccessor to improve state management and notifications" />
     <MESSAGE value="feat: update FormControl to return TextEditingController and improve synchronization with text input" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: update FormControl to return TextEditingController and improve synchronization with text input" />
+    <MESSAGE value="feat: update FormControl and ControlValueAccessor to support FormControl&lt;String&gt; and improve controller access" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: update FormControl and ControlValueAccessor to support FormControl&lt;String&gt; and improve controller access" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
