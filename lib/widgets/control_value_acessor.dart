@@ -1,4 +1,5 @@
 import 'package:dart_ng_forms/dart_ng_forms.dart';
+import 'package:dart_ng_forms/form_control/control_value.dart';
 import 'package:flutter/material.dart';
 
 mixin ControlValueAcessor<T> on Widget {
@@ -36,7 +37,7 @@ mixin ControlValueAcessor<T> on Widget {
     return formGroup!.control<T>(name!);
   }
 
-  ValueNotifier<T> get valueNotifier{
+  ControlValue<T> get valueNotifier{
     assert((){
       if(control == null && (formGroup == null || name == null)){
         throw FlutterError('ControlValueAcessor: model or formGroup and name must be provided to access Value Notifier');

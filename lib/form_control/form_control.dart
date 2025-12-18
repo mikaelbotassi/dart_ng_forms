@@ -1,3 +1,4 @@
+import 'package:dart_ng_forms/form_control/control_value.dart';
 import 'package:dart_ng_forms/helpers/text_control_binder.dart';
 import 'package:flutter/material.dart';
 import '../abstract_control.dart';
@@ -16,7 +17,7 @@ class FormControl<T> extends AbstractControl<T> {
   TextControlBinder? _controllerBinder;
 
   /// The underlying value notifier holding the current value.
-  final ValueNotifier<T> valueNotifier;
+  final ControlValue<T> valueNotifier;
 
   /// The optional validator function to check the control's value.
   FormFieldValidator<T>? validator;
@@ -29,7 +30,7 @@ class FormControl<T> extends AbstractControl<T> {
     required T initialValue,
     this.validator,
     FormControlOptions? options,
-  }) : options = options ?? FormControlOptions(), valueNotifier = ValueNotifier<T>(initialValue);
+  }) : options = options ?? FormControlOptions(), valueNotifier = ControlValue<T>(initialValue);
 
   /// Returns the current value of the control.
   @override
@@ -43,12 +44,8 @@ class FormControl<T> extends AbstractControl<T> {
     if (options.disabled || options.readonly) {
       return;
     }
-    if(notify){
-      valueNotifier.value = val;
-      notifyListeners();
-      return;
-    }
-    (valueNotifier as dynamic)._value = val;
+    valueNotifier.setValue(val, notify: notify);
+    if(notify) notifyListeners();
   }
 
   /// Whether the control is valid (no validation errors).
@@ -108,7 +105,7 @@ class FormControl<T> extends AbstractControl<T> {
 
   void refresh(){
     notifyListeners();
-    valueNotifier.value = value;
+    valueNotifier.refresh();
   }
 
   /// Disposes the [ValueNotifier].
