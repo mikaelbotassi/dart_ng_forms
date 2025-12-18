@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.0] - 2025-12-18
+### FEATURE
+- Change ValueNotifier to ControlNotifier;
+
 ## [1.1.1] - 2025-12-18
 ### FEATURE
 - Added a refresh function to notify listeners;
