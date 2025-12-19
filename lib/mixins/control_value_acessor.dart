@@ -102,6 +102,17 @@ mixin ControlValueAcessor<T> on Widget {
   /// `FormControl<String>`). Use carefully if `T` can be non-String.
   TextEditingController get controller => formControl.controller;
 
+  /// Whether the control is readonly.
+  ///
+  /// Readonly controls should not accept user input and typically do not display
+  /// validation errors.
+  bool get readonly => formControl.readonly;
+
+  /// Updates the readonly state.
+  void setReadonly(bool v, {bool notify = true}){
+    formControl.setReadonly(v, notify: notify);
+  }
+
   /// Whether the user has interacted with the control.
   ///
   /// Commonly used to decide when to show validation errors (e.g., only after touch).
