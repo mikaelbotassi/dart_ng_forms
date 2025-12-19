@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.3.1] - 2025-12-18
+### FEATURE
+- Added markAs(Touched/Untouched) into FormControl and markAllAs(Touched/Untouched) into FormGroup;
+
 ## [1.3.0] - 2025-12-18
 ### FEATURE
 - Added a new 'touched' option into FormControlOption;
