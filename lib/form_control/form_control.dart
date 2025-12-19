@@ -63,6 +63,7 @@ class FormControl<T> extends AbstractControl<T> {
 
   /// Sets whether the control is marked as required.
   void setRequired(bool v, {bool notify = true}){
+    if(options.required == v) return;
     options.required = v;
     if(notify) notifyListeners();
   }
@@ -72,6 +73,7 @@ class FormControl<T> extends AbstractControl<T> {
 
   /// Sets whether the control is disabled.
   void setDisabled(bool v, {bool notify = true}){
+    if(options.disabled == v) return;
     options.disabled = v;
     if(notify) notifyListeners();
   }
@@ -81,6 +83,7 @@ class FormControl<T> extends AbstractControl<T> {
 
   /// Sets whether the control is readonly.
   void setReadonly(bool v, {bool notify = true}){
+    if(options.readonly == v) return;
     options.readonly = v;
     if(notify) notifyListeners();
   }
@@ -109,11 +112,13 @@ class FormControl<T> extends AbstractControl<T> {
   bool get touched => options.touched;
 
   void markAsTouched({bool notify = true}) {
+    if(options.touched) return;
     options.touched = true;
     if(notify) notifyListeners();
   }
 
   void markAsUntouched({bool notify = true}) {
+    if(!options.touched) return;
     options.touched = false;
     if(notify) notifyListeners();
   }
