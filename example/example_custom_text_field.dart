@@ -1,4 +1,3 @@
-import 'package:dart_ng_forms/mixins/control_value_acessor.dart';
 import 'package:flutter/material.dart';
 import 'package:dart_ng_forms/dart_ng_forms.dart';
 
@@ -33,7 +32,7 @@ class CustomTextField extends StatelessWidget with ControlValueAcessor<String> {
     return ListenableBuilder(
       listenable: changeNotifier,
       builder: (context, _) => TextFormField(
-        enabled: !isDisabled,
+        enabled: !disabled,
         decoration: InputDecoration(
           labelText: name,
           errorText: error,

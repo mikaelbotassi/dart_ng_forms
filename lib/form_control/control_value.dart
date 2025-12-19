@@ -1,4 +1,4 @@
-import 'package:flutter/foundation.dart';
+part of 'form_control.dart';
 
 class ControlValue<T> extends ChangeNotifier implements ValueListenable<T> {
   /// Creates a [ChangeNotifier] that wraps this value.

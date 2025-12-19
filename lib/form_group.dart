@@ -1,6 +1,7 @@
 import 'dart:async';
+import 'package:dart_ng_forms/helpers/form_deps.dart';
 import 'package:dart_ng_forms/validation/form_rules.dart';
-import 'exceptions/validation_exception.dart';
+import 'validation/validation_exception.dart';
 import 'package:result_dart/result_dart.dart';
 import 'form_control/form_control.dart';
 import 'abstract_control.dart';
@@ -17,6 +18,7 @@ abstract class FormGroup<M> extends AbstractControl<Map<String, dynamic>> {
   final Map<String, AbstractControl> controls;
 
   late final FormRules rules;
+  late final FormDeps deps;
 
   /// Creates a [FormGroup] with the provided controls.
   FormGroup(this.controls){
@@ -151,16 +153,6 @@ abstract class FormGroup<M> extends AbstractControl<Map<String, dynamic>> {
     }
   }
 
-  /// Disposes all child controls and this group.
-  @override
-  void dispose() {
-    rules.dispose();
-    for (var c in controls.values) {
-      c.dispose();
-    }
-    super.dispose();
-  }
-
   /// Validates the form group and returns a [Result].
   ///
   /// Returns a [Success] if valid or a [Failure] with [ValidationException] if not.
@@ -170,5 +162,16 @@ abstract class FormGroup<M> extends AbstractControl<Map<String, dynamic>> {
       return Success(this);
     }
     return Failure(ValidationException(error));
+  }
+
+  /// Disposes all child controls and this group.
+  @override
+  void dispose() {
+    rules.dispose();
+    deps.dispose();
+    for (var c in controls.values) {
+      c.dispose();
+    }
+    super.dispose();
   }
 }

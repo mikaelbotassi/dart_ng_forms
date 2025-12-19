@@ -1,8 +1,10 @@
-import 'package:dart_ng_forms/form_control/control_value.dart';
 import 'package:dart_ng_forms/helpers/text_control_binder.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import '../abstract_control.dart';
-import 'form_control_options.dart';
+
+part 'form_control_options.dart';
+part 'control_value.dart';
 
 /// A single reactive form control.
 ///

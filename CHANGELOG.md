@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.4.0] - 2025-12-19
+### BREAK CHANGES
+- Removed disabled, required and validators from `ControlValueAcessor`;
+- Added Helper to lead with multiple dependencies input named `FormDeps`;
+- Documented `TextControlBinder`, `ControlValueAcessor` and `FormRules`
+
 ## [1.3.1] - 2025-12-18
 ### FEATURE
 - Added markAs(Touched/Untouched) into FormControl and markAllAs(Touched/Untouched) into FormGroup;
@@ -49,7 +55,7 @@ All notable changes to this project will be documented in this file.
 ## [0.2.6] - 2025-06-30
 ### Changed
 - revise README for clarity and structure.
-- 
+-
 ## [0.2.5] - 2025-06-30
 ### Changed
 - revise README for clarity and structure; update features and examples.
@@ -85,7 +91,7 @@ All notable changes to this project will be documented in this file.
 ## [0.1.0] - 2025-06-18
 ### Added
 - Initial release with:
-  - `FormControl<T, V>` abstraction.
-  - `FormGroup<T>` supporting nested controls.
-  - Validation and error handling.
-  - Integration with `TextEditingController`.
+    - `FormControl<T, V>` abstraction.
+    - `FormGroup<T>` supporting nested controls.
+    - Validation and error handling.
+    - Integration with `TextEditingController`.

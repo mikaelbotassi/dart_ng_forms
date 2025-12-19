@@ -1,3 +1,5 @@
+part of 'form_control.dart';
+
 /// Configuration options for a [FormControl].
 ///
 /// This class defines flags to control the behavior of the form control,
