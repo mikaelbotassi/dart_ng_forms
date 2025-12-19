@@ -23,6 +23,7 @@ abstract class FormGroup<M> extends AbstractControl<Map<String, dynamic>> {
   /// Creates a [FormGroup] with the provided controls.
   FormGroup(this.controls){
     rules = FormRules(this);
+    deps = FormDeps(this);
   }
 
   /// Registers a new [control] under the given [name].
