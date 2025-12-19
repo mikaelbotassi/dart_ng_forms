@@ -2,9 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.4.2] - 2025-12-19
+### BREAK CHANGES
+- Add readonly state management to FormControl;
+
 ## [1.4.1] - 2025-12-19
 ### BREAK CHANGES
-- optimize state change methods in FormControl to prevent unnecessary notifications;
+- Optimize state change methods in FormControl to prevent unnecessary notifications;
 
 ## [1.4.0] - 2025-12-19
 ### BREAK CHANGES
