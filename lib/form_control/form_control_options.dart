@@ -30,9 +30,14 @@ class FormControlOptions {
   ///   isReadonly: false,
   /// );
   /// ```
+
+  /// Whether the control has been touched.
+  bool touched;
+
   FormControlOptions({
     this.required = false,
     this.disabled = false,
     this.readonly = false,
+    this.touched = false,
   });
 }

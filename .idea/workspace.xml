@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78192f81-09cb-40f1-976c-648764c49853" name="Changes" comment="chore: update version to 1.1.1 and add changelog entry for refresh function">
+    <list default="true" id="78192f81-09cb-40f1-976c-648764c49853" name="Changes" comment="chore: update version to 1.2.0 and document change from ValueNotifier to ControlNotifier in changelog">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/form_control/form_control.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/form_control/form_control.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/widgets/control_value_acessor.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widgets/control_value_acessor.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/form_control/form_control_options.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/form_control/form_control_options.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +142,23 @@
       <option name="project" value="LOCAL" />
       <updated>1766085462775</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="feat: replace ValueNotifier with ControlValue for improved state management">
+      <option name="closed" value="true" />
+      <created>1766087038713</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1766087038713</updated>
+    </task>
+    <task id="LOCAL-00009" summary="chore: update version to 1.2.0 and document change from ValueNotifier to ControlNotifier in changelog">
+      <option name="closed" value="true" />
+      <created>1766087108458</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1766087108458</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -150,7 +168,9 @@
     <MESSAGE value="feat: add FormRules for declarative and dependent field validation" />
     <MESSAGE value="feat: add refresh method to FormControl for improved state updates" />
     <MESSAGE value="chore: update version to 1.1.1 and add changelog entry for refresh function" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: update version to 1.1.1 and add changelog entry for refresh function" />
+    <MESSAGE value="feat: replace ValueNotifier with ControlValue for improved state management" />
+    <MESSAGE value="chore: update version to 1.2.0 and document change from ValueNotifier to ControlNotifier in changelog" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: update version to 1.2.0 and document change from ValueNotifier to ControlNotifier in changelog" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

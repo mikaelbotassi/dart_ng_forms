@@ -103,6 +103,15 @@ class FormControl<T> extends AbstractControl<T> {
     return _controllerBinder!.controller;
   }
 
+  /// Whether the control has been touched.
+  bool get touched => options.touched;
+
+  /// Sets whether the control has been touched.
+  setTouched(bool value){
+    options.touched = value;
+    notifyListeners();
+  }
+
   void refresh(){
     notifyListeners();
     valueNotifier.refresh();
