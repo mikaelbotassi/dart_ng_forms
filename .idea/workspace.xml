@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78192f81-09cb-40f1-976c-648764c49853" name="Changes" comment="chore: update version to 1.2.0 and document change from ValueNotifier to ControlNotifier in changelog">
+    <list default="true" id="78192f81-09cb-40f1-976c-648764c49853" name="Changes" comment="feat: add 'touched' option to FormControl for tracking control interaction">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/example_custom_text_field.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/example_custom_text_field.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/dart_ng_forms.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/dart_ng_forms.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/form_control/form_control.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/form_control/form_control.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/form_control/form_control_options.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/form_control/form_control_options.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/form_group.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/form_group.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/widgets/control_value_acessor.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/mixins/control_value_acessor.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +159,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766087108458</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="feat: add 'touched' option to FormControl for tracking control interaction">
+      <option name="closed" value="true" />
+      <created>1766143610445</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1766143610445</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -170,7 +179,8 @@
     <MESSAGE value="chore: update version to 1.1.1 and add changelog entry for refresh function" />
     <MESSAGE value="feat: replace ValueNotifier with ControlValue for improved state management" />
     <MESSAGE value="chore: update version to 1.2.0 and document change from ValueNotifier to ControlNotifier in changelog" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: update version to 1.2.0 and document change from ValueNotifier to ControlNotifier in changelog" />
+    <MESSAGE value="feat: add 'touched' option to FormControl for tracking control interaction" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add 'touched' option to FormControl for tracking control interaction" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

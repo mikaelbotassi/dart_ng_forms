@@ -129,6 +129,28 @@ abstract class FormGroup<M> extends AbstractControl<Map<String, dynamic>> {
       .map((c) => c.error)
       .firstWhere((e) => e != null, orElse: () => null);
 
+  /// Marks all controls in the group as touched.
+  void markAllAsTouched({bool notify = true}) {
+    for (var c in controls.values) {
+      if (c is FormGroup) {
+        c.markAllAsTouched(notify: notify);
+        continue;
+      }
+      (c as FormControl).markAsTouched(notify: notify);
+    }
+  }
+
+  /// Marks all controls in the group as untouched.
+  void markAllAsUntouched({bool notify = true}) {
+    for (var c in controls.values) {
+      if (c is FormGroup) {
+        c.markAllAsUntouched(notify: notify);
+        continue;
+      }
+      (c as FormControl).markAsUntouched(notify: notify);
+    }
+  }
+
   /// Disposes all child controls and this group.
   @override
   void dispose() {

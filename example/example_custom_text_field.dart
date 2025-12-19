@@ -1,4 +1,4 @@
-import 'package:dart_ng_forms/widgets/control_value_acessor.dart';
+import 'package:dart_ng_forms/mixins/control_value_acessor.dart';
 import 'package:flutter/material.dart';
 import 'package:dart_ng_forms/dart_ng_forms.dart';
 

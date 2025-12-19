@@ -106,10 +106,14 @@ class FormControl<T> extends AbstractControl<T> {
   /// Whether the control has been touched.
   bool get touched => options.touched;
 
-  /// Sets whether the control has been touched.
-  setTouched(bool value){
-    options.touched = value;
-    notifyListeners();
+  void markAsTouched({bool notify = true}) {
+    options.touched = true;
+    if(notify) notifyListeners();
+  }
+
+  void markAsUntouched({bool notify = true}) {
+    options.touched = false;
+    if(notify) notifyListeners();
   }
 
   void refresh(){
