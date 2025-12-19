@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.4.3] - 2025-12-19
+### FIX
+- Initialized FormDeps into FormGroup constructor;
+
 ## [1.4.2] - 2025-12-19
 ### BREAK CHANGES
 - Add readonly state management to FormControl;
