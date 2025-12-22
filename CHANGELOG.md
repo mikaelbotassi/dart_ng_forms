@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.4.4] - 2025-12-22
+### FEATURE
+- Created `fromRaw` and `toRaw` to convert `FormControl Value`;
+
 ## [1.4.3] - 2025-12-19
 ### FIX
 - Initialized FormDeps into FormGroup constructor;

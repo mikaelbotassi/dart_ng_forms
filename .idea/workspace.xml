@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78192f81-09cb-40f1-976c-648764c49853" name="Changes" comment="feat: add readonly state management to FormControl" />
+    <list default="true" id="78192f81-09cb-40f1-976c-648764c49853" name="Changes" comment="feat: add readonly state management to FormControl">
+      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/form_control/form_control.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/form_control/form_control.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/form_group.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/form_group.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -211,7 +218,23 @@
       <option name="project" value="LOCAL" />
       <updated>1766153444437</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="feat: add readonly state management to FormControl">
+      <option name="closed" value="true" />
+      <created>1766165350594</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1766165350594</updated>
+    </task>
+    <task id="LOCAL-00018" summary="feat: add readonly state management to FormControl">
+      <option name="closed" value="true" />
+      <created>1766165419263</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1766165419263</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
