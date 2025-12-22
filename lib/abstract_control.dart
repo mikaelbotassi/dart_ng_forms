@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 
 /// Base class for form controls and groups.
 abstract class AbstractControl<T> extends ChangeNotifier {
+
   /// The current value of the control.
   T get value;
 
@@ -13,4 +14,6 @@ abstract class AbstractControl<T> extends ChangeNotifier {
 
   /// Sets the value of the control.
   void setValue(T val, {bool notify = true});
+
+  Object? getRawValue();
 }

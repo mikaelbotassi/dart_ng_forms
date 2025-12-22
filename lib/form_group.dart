@@ -60,11 +60,29 @@ abstract class FormGroup<M> extends AbstractControl<Map<String, dynamic>> {
     }
   }
 
-  /// Converts the form state to a model object of type [M].
-  FutureOr<M> toModel();
+  /// Converts the form group to a model of type [M].
+  FutureOr<M> toModel() {
+    if (M == Map<String, dynamic>) {
+      return getRawValue() as M;
+    }
+    throw UnsupportedError(
+      'toModel() não implementado para $runtimeType. '
+          'Implemente ou use FormGroup<Map<String, dynamic>>.',
+    );
+  }
 
-  /// Sets the control values from a model of type [M].
-  void fromModel(M model);
+  /// Converts the form group from a model of type [M].
+  void fromModel(M model) {
+    if (model is Map<String, dynamic>) {
+      setValue(model, notify: false);
+      refreshAll();
+      notifyListeners();
+      return;
+    }
+    throw UnsupportedError(
+      'fromModel() não implementado para $runtimeType.',
+    );
+  }
 
   void _onControlChanged() => notifyListeners();
 
@@ -107,31 +125,54 @@ abstract class FormGroup<M> extends AbstractControl<Map<String, dynamic>> {
 
   /// Returns the current value of the group as a map.
   @override
-  Map<String, dynamic> get value =>
-      {for (var e in controls.entries) e.key: e.value.value};
+  Map<String, dynamic> get value => {for (var e in controls.entries) e.key: e.value.value};
 
   /// Sets the values of all controls from the provided map [val].
   @override
   void setValue(Map<String, dynamic> val, {bool notify = true}) {
-    val.forEach((key, v) {
-      if (controls.containsKey(key)) {
-        controls[key]!.setValue(v, notify: notify);
+    for (final entry in val.entries) {
+      final key = entry.key;
+      if (!controls.containsKey(key)) continue;
+
+      final ctrl = controls[key]!;
+      var value = entry.value;
+
+      if (ctrl is FormGroup) {
+        if (value is Map<String, dynamic>) {
+          ctrl.setValue(value, notify: notify);
+          continue;
+        }
+        if (value == null) {
+          ctrl.setValue(<String, dynamic>{}, notify: notify);
+          continue;
+        }
+        throw ArgumentError(
+          'Valor para "$key" precisa ser Map<String, dynamic> (FormGroup). '
+              'Recebido: ${value.runtimeType}',
+        );
       }
-    });
-    if(notify) notifyListeners();
+
+      ctrl.setValue(value, notify: notify);
+    }
+
+    if (notify) notifyListeners();
   }
 
   /// Recursively returns the raw value of all controls and nested groups.
+  @override
   Map<String, dynamic> getRawValue() {
     final rawValue = <String, dynamic>{};
     for (var entry in controls.entries) {
-      if (entry.value is FormGroup) {
-        rawValue.addAll((entry.value as FormGroup).getRawValue());
-      } else {
-        rawValue[entry.key] = entry.value.value;
-      }
+      rawValue[entry.key] = entry.value.getRawValue();
     }
     return rawValue;
+  }
+
+  /// Recursively sets the raw value of all controls and nested groups.
+  void setRawValue(Map<String,dynamic> rawValue) {
+    for (var entry in controls.entries){
+      (entry.value as dynamic).setRawValue(rawValue[entry.key]);
+    }
   }
 
   /// Whether all controls in the group are valid.
