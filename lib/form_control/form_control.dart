@@ -18,8 +18,8 @@ class FormControl<T> extends AbstractControl<T> {
 
   TextControlBinder? _controllerBinder;
 
-  final T Function<V>(V rawValue)? fromRaw;
-  final V Function<V>(T value)? toRaw;
+  final Object? Function(T value)? toRaw;
+  final T Function(Object? raw)? fromRaw;
 
   /// The underlying value notifier holding the current value.
   final ControlValue<T> valueNotifier;
@@ -58,8 +58,9 @@ class FormControl<T> extends AbstractControl<T> {
   Object? getRawValue() => toRaw != null ? toRaw!(value) : value;
 
   /// Sets the raw value of the control.
-  void setRawValue<V>(V value){
-    setValue(fromRaw != null ? fromRaw!<V>(value) : value as T);
+  @override
+  void setRawValue(Object? value){
+    setValue(fromRaw != null ? fromRaw!(value) : value as T);
   }
 
   /// Sets the control value, unless disabled or readonly.

@@ -169,9 +169,18 @@ abstract class FormGroup<M> extends AbstractControl<Map<String, dynamic>> {
   }
 
   /// Recursively sets the raw value of all controls and nested groups.
-  void setRawValue(Map<String,dynamic> rawValue) {
-    for (var entry in controls.entries){
-      (entry.value as dynamic).setRawValue(rawValue[entry.key]);
+  @override
+  void setRawValue(Object? raw) {
+    if (raw == null) return;
+
+    if (raw is! Map<String, dynamic>) {
+      throw ArgumentError(
+        'FormGroup.setRawValue espera Map<String, dynamic>. Recebido: ${raw.runtimeType}',
+      );
+    }
+
+    for (final entry in controls.entries) {
+      entry.value.setRawValue(raw[entry.key]);
     }
   }
 
