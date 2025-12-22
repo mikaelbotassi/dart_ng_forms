@@ -34,10 +34,18 @@ class FormControl<T> extends AbstractControl<T> {
   FormControl({
     required T initialValue,
     this.validator,
-    FormControlOptions? options,
+    bool required = false,
+    bool disabled = false,
+    bool readonly = false,
+    bool touched = false,
     this.fromRaw,
     this.toRaw,
-  }) : options = options ?? FormControlOptions(), valueNotifier = ControlValue<T>(initialValue);
+  }) : options = FormControlOptions(
+    required:required,
+    disabled:disabled,
+    readonly:readonly,
+    touched:touched,
+  ), valueNotifier = ControlValue<T>(initialValue);
 
   /// Returns the current value of the control.
   @override

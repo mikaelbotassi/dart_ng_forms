@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78192f81-09cb-40f1-976c-648764c49853" name="Changes" comment="feat: add readonly state management to FormControl">
-      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="78192f81-09cb-40f1-976c-648764c49853" name="Changes" comment="feat: add fromRaw and toRaw methods for FormControl value conversion; update changelog and version to 1.4.4">
       <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/form_control/form_control.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/form_control/form_control.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/form_group.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/form_group.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -234,7 +231,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766165419263</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="feat: add fromRaw and toRaw methods for FormControl value conversion; update changelog and version to 1.4.4">
+      <option name="closed" value="true" />
+      <created>1766431355478</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1766431355478</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -251,7 +256,8 @@
     <MESSAGE value="chore: update version to 1.4.0 and add changelog entries for breaking changes and new features in FormControl and FormGroup" />
     <MESSAGE value="chore: update version to 1.4.1 and optimize state change methods in FormControl" />
     <MESSAGE value="feat: add readonly state management to FormControl" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add readonly state management to FormControl" />
+    <MESSAGE value="feat: add fromRaw and toRaw methods for FormControl value conversion; update changelog and version to 1.4.4" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add fromRaw and toRaw methods for FormControl value conversion; update changelog and version to 1.4.4" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
