@@ -18,8 +18,8 @@ class FormControl<T> extends AbstractControl<T> {
 
   TextControlBinder? _controllerBinder;
 
-  final Object? Function(T value)? toRaw;
-  final T Function(Object? raw)? fromRaw;
+  final V Function<V>(T value)? toRaw;
+  final T Function<V>(V raw)? fromRaw;
 
   /// The underlying value notifier holding the current value.
   final ControlValue<T> valueNotifier;

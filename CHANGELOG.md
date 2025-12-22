@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.5.3] - 2025-12-22
+### FEATURE
+- Generalize `toRaw` and `fromRaw` types in FormControl;
+
 ## [1.5.2] - 2025-12-22
 ### FEATURE
 - feat: add `setRawValue` method to `AbstractControl` and implement it in `FormGroup` and `FormControl`;
