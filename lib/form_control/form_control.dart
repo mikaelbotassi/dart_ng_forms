@@ -6,6 +6,9 @@ import '../abstract_control.dart';
 part 'form_control_options.dart';
 part 'control_value.dart';
 
+typedef ToRawFunction<T,V> = V Function(T value);
+typedef FromRawFunction<T,V> = T Function(V raw);
+
 /// A single reactive form control.
 ///
 /// A `FormControl` holds a value of type [V], notifies listeners on changes,
@@ -18,8 +21,8 @@ class FormControl<T> extends AbstractControl<T> {
 
   TextControlBinder? _controllerBinder;
 
-  final V Function<V>(T value)? toRaw;
-  final T Function<V>(V raw)? fromRaw;
+  final ToRawFunction? toRaw;
+  final FromRawFunction? fromRaw;
 
   /// The underlying value notifier holding the current value.
   final ControlValue<T> valueNotifier;

@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.5.4] - 2025-12-22
+### FEATURE
+- Created `ToRawFunction` and `FromRawFunction` to define function types;
+
 ## [1.5.3] - 2025-12-22
 ### FEATURE
 - Generalize `toRaw` and `fromRaw` types in FormControl;
