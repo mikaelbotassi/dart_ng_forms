@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.5.5] - 2025-12-22
+### REFACTOR
+- Refactored `FromRawFunction` to `FromRawFunction<T>` and `ToRawFunction<T>` to `ToRawFunction`;
+
 ## [1.5.4] - 2025-12-22
 ### FEATURE
 - Created `ToRawFunction` and `FromRawFunction` to define function types;

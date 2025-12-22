@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78192f81-09cb-40f1-976c-648764c49853" name="Changes" comment="chore: update changelog for version 1.5.3; increment version to 1.5.3 in pubspec.yaml&#10;feat: generalize `toRaw` and `fromRaw` types in FormControl" />
+    <list default="true" id="78192f81-09cb-40f1-976c-648764c49853" name="Changes" comment="feat: add `ToRawFunction` and `FromRawFunction` typedefs to enhance form control functionality; update version to 1.5.4">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/form_control/form_control.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/form_control/form_control.dart" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -283,7 +286,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766439123119</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="feat: generalize `toRaw` and `fromRaw` types in FormControl">
+      <option name="closed" value="true" />
+      <created>1766439420517</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1766439420517</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -307,7 +318,8 @@
     <MESSAGE value="feat: add `setRawValue` method to `AbstractControl` and implement it in `FormGroup` and `FormControl`" />
     <MESSAGE value="chore: update changelog for version 1.5.2; increment version to 1.5.2 in pubspec.yaml" />
     <MESSAGE value="chore: update changelog for version 1.5.3; increment version to 1.5.3 in pubspec.yaml&#10;feat: generalize `toRaw` and `fromRaw` types in FormControl" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: update changelog for version 1.5.3; increment version to 1.5.3 in pubspec.yaml&#10;feat: generalize `toRaw` and `fromRaw` types in FormControl" />
+    <MESSAGE value="feat: generalize `toRaw` and `fromRaw` types in FormControl" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: generalize `toRaw` and `fromRaw` types in FormControl" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
