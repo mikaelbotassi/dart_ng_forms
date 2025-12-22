@@ -2,9 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.5.2] - 2025-12-22
+### FEATURE
+- feat: add `setRawValue` method to `AbstractControl` and implement it in `FormGroup` and `FormControl`;
+
 ## [1.5.1] - 2025-12-22
 ### FEATURE
-- add getRawValue and setRawValue methods to FormControl; update fromModel and toModel implementations
+- add getRawValue and setRawValue methods to FormControl; update fromModel and toModel implementations;
 
 ## [1.5.0] - 2025-12-22
 ### BREAK CHANGES
