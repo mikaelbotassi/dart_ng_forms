@@ -2,9 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.5.1] - 2025-12-22
+### FEATURE
+- add getRawValue and setRawValue methods to FormControl; update fromModel and toModel implementations
+
 ## [1.5.0] - 2025-12-22
 ### BREAK CHANGES
-- Refactored `FormControlOptions` to pass options directly to the `FormControl` constructor.;
+- Refactored `FormControlOptions` to pass options directly to the `FormControl` constructor;
 
 ## [1.4.4] - 2025-12-22
 ### FEATURE
