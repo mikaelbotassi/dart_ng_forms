@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.5.6] - 2025-12-22
+### REFACTOR
+- The `ToRawFunction` and `FromRawFunction` typedefs have been updated to use `Object?` instead of generic types `<V>`. This change provides more flexibility by relaxing the strict type constraints on the raw value;
+
 ## [1.5.5] - 2025-12-22
 ### REFACTOR
 - Refactored `FromRawFunction` to `FromRawFunction<T>` and `ToRawFunction<T>` to `ToRawFunction`;

@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78192f81-09cb-40f1-976c-648764c49853" name="Changes" comment="feat: add `ToRawFunction` and `FromRawFunction` typedefs to enhance form control functionality; update version to 1.5.4">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/form_control/form_control.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/form_control/form_control.dart" afterDir="false" />
-    </list>
+    <list default="true" id="78192f81-09cb-40f1-976c-648764c49853" name="Changes" comment="feat: refactor `FromRawFunction` and `ToRawFunction` typedefs for improved type safety" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -294,7 +291,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766439420517</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="feat: refactor `FromRawFunction` and `ToRawFunction` typedefs for improved type safety">
+      <option name="closed" value="true" />
+      <created>1766440303362</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1766440303362</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -319,7 +324,8 @@
     <MESSAGE value="chore: update changelog for version 1.5.2; increment version to 1.5.2 in pubspec.yaml" />
     <MESSAGE value="chore: update changelog for version 1.5.3; increment version to 1.5.3 in pubspec.yaml&#10;feat: generalize `toRaw` and `fromRaw` types in FormControl" />
     <MESSAGE value="feat: generalize `toRaw` and `fromRaw` types in FormControl" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: generalize `toRaw` and `fromRaw` types in FormControl" />
+    <MESSAGE value="feat: refactor `FromRawFunction` and `ToRawFunction` typedefs for improved type safety" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: refactor `FromRawFunction` and `ToRawFunction` typedefs for improved type safety" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

@@ -6,8 +6,8 @@ import '../abstract_control.dart';
 part 'form_control_options.dart';
 part 'control_value.dart';
 
-typedef ToRawFunction<T> = V Function<V>(T value);
-typedef FromRawFunction<T> = T Function<V>(V raw);
+typedef ToRawFunction<T> = Object? Function(T value);
+typedef FromRawFunction<T> = T Function(Object? raw);
 
 /// A single reactive form control.
 ///
