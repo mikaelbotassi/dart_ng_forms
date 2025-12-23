@@ -2,9 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
-## [1.5.6] - 2025-12-23
+## [1.5.7] - 2025-12-23
 ### FEATURE
-- Add flatten option to getRawValue and improve setRawValue in FormGroup;
+- Add flatten option to `getRawValue` and improve `setRawValue` in `FormGroup`;
+
+## [1.5.6] - 2025-12-23
+### REFACTOR
+- The `ToRawFunction` and `FromRawFunction` typedefs have been updated to use `Object?` instead of generic types `<V>`. This change provides more flexibility by relaxing the strict type constraints on the raw value;
 
 ## [1.5.5] - 2025-12-22
 ### REFACTOR
