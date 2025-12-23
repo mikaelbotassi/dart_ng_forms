@@ -158,19 +158,40 @@ abstract class FormGroup<M> extends AbstractControl<Map<String, dynamic>> {
     if (notify) notifyListeners();
   }
 
-  /// Recursively returns the raw value of all controls and nested groups.
+  /// Builds a raw value map for all controls in this group.
+  /// When [flatten] is enabled, values from nested groups are flattened into the parent map;
+  /// otherwise, the nested structure is preserved.
   @override
-  Map<String, dynamic> getRawValue() {
+  Map<String, dynamic> getRawValue({bool flatten = true}) {
     final rawValue = <String, dynamic>{};
     for (var entry in controls.entries) {
+      if(entry.value is FormGroup){
+        final group = entry.value as FormGroup;
+        if(!flatten){
+          rawValue[entry.key] = group.getRawValue();
+          continue;
+        }
+        rawValue.addAll(group.getRawValue());
+        continue;
+      }
       rawValue[entry.key] = entry.value.getRawValue();
     }
     return rawValue;
   }
 
-  /// Recursively sets the raw value of all controls and nested groups.
+  /// Recursively applies a raw value map to this group and its nested groups.
+  ///
+  /// [raw] must be a `Map<String, dynamic>` where each key matches a control name.
+  /// - For nested [FormGroup] controls, the same [raw] map is forwarded so the group can
+  ///   pick its own keys.
+  /// - For non-group controls, only the value for the corresponding key is applied.
+  ///
+  /// Notification behavior:
+  /// - Child controls are updated with `notify: false` to avoid cascading notifications.
+  /// - When [notify] is true, this [FormGroup] notifies its listeners after each control update.
+  ///   If you need to notify all controls after a bulk update, prefer calling `refreshAll()`.
   @override
-  void setRawValue(Object? raw) {
+  void setRawValue(Object? raw, {bool notify = true}) {
     if (raw == null) return;
 
     if (raw is! Map<String, dynamic>) {
@@ -180,7 +201,13 @@ abstract class FormGroup<M> extends AbstractControl<Map<String, dynamic>> {
     }
 
     for (final entry in controls.entries) {
-      entry.value.setRawValue(raw[entry.key]);
+      if(entry.value is FormGroup) {
+        final group = entry.value as FormGroup;
+        group.setRawValue(raw);
+        continue;
+      }
+      entry.value.setRawValue(raw[entry.key], notify: false);
+      if(notify) notifyListeners();
     }
   }
 

@@ -62,8 +62,8 @@ class FormControl<T> extends AbstractControl<T> {
 
   /// Sets the raw value of the control.
   @override
-  void setRawValue(Object? value){
-    setValue(fromRaw != null ? fromRaw!(value) : value as T);
+  void setRawValue(Object? value, {bool notify = true}){
+    setValue(fromRaw != null ? fromRaw!(value) : value as T, notify:notify);
   }
 
   /// Sets the control value, unless disabled or readonly.

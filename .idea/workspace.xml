@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78192f81-09cb-40f1-976c-648764c49853" name="Changes" comment="feat: refactor `FromRawFunction` and `ToRawFunction` typedefs for improved type safety" />
+    <list default="true" id="78192f81-09cb-40f1-976c-648764c49853" name="Changes" comment="chore: update changelog for version 1.5.6; increment version to 1.5.6 in CHANGELOG.md">
+      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/abstract_control.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/abstract_control.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/form_control/form_control.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/form_control/form_control.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/form_group.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/form_group.dart" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -299,7 +305,23 @@
       <option name="project" value="LOCAL" />
       <updated>1766440303362</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="chore: relax type constraints for ToRawFunction and FromRawFunction&#10;&#10;The `ToRawFunction` and `FromRawFunction` typedefs have been updated to use `Object?` instead of generic types `&lt;V&gt;`. This change provides more flexibility by relaxing the strict type constraints on the raw value.">
+      <option name="closed" value="true" />
+      <created>1766489087263</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1766489087263</updated>
+    </task>
+    <task id="LOCAL-00029" summary="chore: update changelog for version 1.5.6; increment version to 1.5.6 in CHANGELOG.md">
+      <option name="closed" value="true" />
+      <created>1766489148757</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1766489148757</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -325,7 +347,9 @@
     <MESSAGE value="chore: update changelog for version 1.5.3; increment version to 1.5.3 in pubspec.yaml&#10;feat: generalize `toRaw` and `fromRaw` types in FormControl" />
     <MESSAGE value="feat: generalize `toRaw` and `fromRaw` types in FormControl" />
     <MESSAGE value="feat: refactor `FromRawFunction` and `ToRawFunction` typedefs for improved type safety" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: refactor `FromRawFunction` and `ToRawFunction` typedefs for improved type safety" />
+    <MESSAGE value="chore: relax type constraints for ToRawFunction and FromRawFunction&#10;&#10;The `ToRawFunction` and `FromRawFunction` typedefs have been updated to use `Object?` instead of generic types `&lt;V&gt;`. This change provides more flexibility by relaxing the strict type constraints on the raw value." />
+    <MESSAGE value="chore: update changelog for version 1.5.6; increment version to 1.5.6 in CHANGELOG.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: update changelog for version 1.5.6; increment version to 1.5.6 in CHANGELOG.md" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

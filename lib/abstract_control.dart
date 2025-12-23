@@ -17,6 +17,6 @@ abstract class AbstractControl<T> extends ChangeNotifier {
 
   Object? getRawValue();
 
-  void setRawValue(Object? value);
+  void setRawValue(Object? value, {bool notify = true});
 
 }
