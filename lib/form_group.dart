@@ -206,6 +206,7 @@ abstract class FormGroup<M> extends AbstractControl<Map<String, dynamic>> {
         group.setRawValue(raw);
         continue;
       }
+      if(!raw.containsKey(entry.key)) continue;
       entry.value.setRawValue(raw[entry.key], notify: false);
       if(notify) notifyListeners();
     }

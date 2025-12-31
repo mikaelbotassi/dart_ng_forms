@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78192f81-09cb-40f1-976c-648764c49853" name="Changes" comment="chore: update changelog for version 1.5.6; increment version to 1.5.6 in CHANGELOG.md">
-      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
+    <list default="true" id="78192f81-09cb-40f1-976c-648764c49853" name="Changes" comment="feat: enhance setRawValue and getRawValue methods in FormGroup for improved functionality">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/abstract_control.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/abstract_control.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/form_control/form_control.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/form_control/form_control.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/form_group.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/form_group.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -321,7 +320,23 @@
       <option name="project" value="LOCAL" />
       <updated>1766489148757</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="feat: enhance setRawValue and getRawValue methods in FormGroup for improved functionality">
+      <option name="closed" value="true" />
+      <created>1766520045968</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1766520045968</updated>
+    </task>
+    <task id="LOCAL-00031" summary="feat: enhance setRawValue and getRawValue methods in FormGroup for improved functionality">
+      <option name="closed" value="true" />
+      <created>1766520108782</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1766520108782</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -349,7 +364,8 @@
     <MESSAGE value="feat: refactor `FromRawFunction` and `ToRawFunction` typedefs for improved type safety" />
     <MESSAGE value="chore: relax type constraints for ToRawFunction and FromRawFunction&#10;&#10;The `ToRawFunction` and `FromRawFunction` typedefs have been updated to use `Object?` instead of generic types `&lt;V&gt;`. This change provides more flexibility by relaxing the strict type constraints on the raw value." />
     <MESSAGE value="chore: update changelog for version 1.5.6; increment version to 1.5.6 in CHANGELOG.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: update changelog for version 1.5.6; increment version to 1.5.6 in CHANGELOG.md" />
+    <MESSAGE value="feat: enhance setRawValue and getRawValue methods in FormGroup for improved functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: enhance setRawValue and getRawValue methods in FormGroup for improved functionality" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

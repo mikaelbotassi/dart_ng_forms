@@ -2,9 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.5.8] - 2025-12-31
+### HOTFIX
+- Added check for missing keys in setRawValue method of FormGroup;
+
 ## [1.5.7] - 2025-12-23
 ### FEATURE
-- Add flatten option to `getRawValue` and improve `setRawValue` in `FormGroup`;
+- Added flatten option to `getRawValue` and improve `setRawValue` in `FormGroup`;
 
 ## [1.5.6] - 2025-12-23
 ### REFACTOR
