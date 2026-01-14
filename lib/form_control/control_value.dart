@@ -16,7 +16,7 @@ class ControlValue<T> extends ChangeNotifier implements ValueListenable<T> {
   @override
   T get value => _value;
   T _value;
-  setValue(T newValue, {bool notify = true}) {
+  void setValue(T newValue, {bool notify = true}) {
     if (_value == newValue) {
       return;
     }

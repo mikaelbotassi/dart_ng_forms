@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.5.12] - 2026-01-14
+
+### Fixed
+
+* Added void return type to setValue and ensure recursive change notifications for nested FormGroups.
+
 ## [1.5.11] - 2026-01-14
 
 ### Changed

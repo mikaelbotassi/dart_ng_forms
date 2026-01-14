@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78192f81-09cb-40f1-976c-648764c49853" name="Changes" comment="feat: add `listenValueOnly` option to `FormGroup` and rename `isListeningControls` to `propagateChanges`">
+    <list default="true" id="78192f81-09cb-40f1-976c-648764c49853" name="Changes" comment="feat: add `listenValueOnly` option to `FormGroup` and update `listenControls` method to handle value changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/form_control/control_value.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/form_control/control_value.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/form_group.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/form_group.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -358,11 +359,18 @@
       <option name="project" value="LOCAL" />
       <updated>1768415608762</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="feat: add `listenValueOnly` option to `FormGroup` and update `listenControls` method to handle value changes">
+      <option name="closed" value="true" />
+      <created>1768417098735</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1768417098735</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat: add FormRules for declarative and dependent field validation" />
     <MESSAGE value="feat: add refresh method to FormControl for improved state updates" />
     <MESSAGE value="chore: update version to 1.1.1 and add changelog entry for refresh function" />
     <MESSAGE value="feat: replace ValueNotifier with ControlValue for improved state management" />
@@ -387,7 +395,8 @@
     <MESSAGE value="feat: add check for missing keys in setRawValue method of FormGroup" />
     <MESSAGE value="feat: add nestedControl method for accessing nested controls in FormGroup; improve listener management and exception handling" />
     <MESSAGE value="feat: add `listenValueOnly` option to `FormGroup` and rename `isListeningControls` to `propagateChanges`" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add `listenValueOnly` option to `FormGroup` and rename `isListeningControls` to `propagateChanges`" />
+    <MESSAGE value="feat: add `listenValueOnly` option to `FormGroup` and update `listenControls` method to handle value changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add `listenValueOnly` option to `FormGroup` and update `listenControls` method to handle value changes" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

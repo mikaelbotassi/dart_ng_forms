@@ -51,6 +51,7 @@ abstract class FormGroup<M> extends AbstractControl<Map<String, dynamic>> {
     if(!_propagateChanges) return;
     if (control is FormGroup) {
       control.listenControls(listenValueOnly);
+      control.addListener(_onControlChanged);
       return;
     }
     if (listenValueOnly) {
