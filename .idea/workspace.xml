@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78192f81-09cb-40f1-976c-648764c49853" name="Changes" comment="feat: enhance setRawValue and getRawValue methods in FormGroup for improved functionality">
+    <list default="true" id="78192f81-09cb-40f1-976c-648764c49853" name="Changes" comment="refactor: streamline method formatting and improve listener management in FormDeps">
+      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/form_group.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/form_group.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/helpers/form_deps.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/helpers/form_deps.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/validation/validation.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/validation/validation.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/validation/validation_exception.dart" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -336,11 +340,18 @@
       <option name="project" value="LOCAL" />
       <updated>1766520108782</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="feat: add check for missing keys in setRawValue method of FormGroup">
+      <option name="closed" value="true" />
+      <created>1767184088652</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1767184088652</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat: update FormControl and ControlValueAccessor to improve state management and notifications" />
     <MESSAGE value="feat: update FormControl to return TextEditingController and improve synchronization with text input" />
     <MESSAGE value="feat: update FormControl and ControlValueAccessor to support FormControl&lt;String&gt; and improve controller access" />
     <MESSAGE value="feat: add FormRules for declarative and dependent field validation" />
@@ -365,7 +376,8 @@
     <MESSAGE value="chore: relax type constraints for ToRawFunction and FromRawFunction&#10;&#10;The `ToRawFunction` and `FromRawFunction` typedefs have been updated to use `Object?` instead of generic types `&lt;V&gt;`. This change provides more flexibility by relaxing the strict type constraints on the raw value." />
     <MESSAGE value="chore: update changelog for version 1.5.6; increment version to 1.5.6 in CHANGELOG.md" />
     <MESSAGE value="feat: enhance setRawValue and getRawValue methods in FormGroup for improved functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: enhance setRawValue and getRawValue methods in FormGroup for improved functionality" />
+    <MESSAGE value="feat: add check for missing keys in setRawValue method of FormGroup" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add check for missing keys in setRawValue method of FormGroup" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.5.9] - 2026-01-14
+### FEATURE
+- Streamline method formatting and improve listener management in FormDeps adding `FormDeps` for FormGroups and Nested Controls too;
+- Improve FormGroup adding `nestedControl` function to access nested controls(separated by '.') directly;
+
 ## [1.5.8] - 2025-12-31
 ### HOTFIX
 - Added check for missing keys in setRawValue method of FormGroup;

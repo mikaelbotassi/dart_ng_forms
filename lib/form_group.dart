@@ -1,10 +1,9 @@
 import 'dart:async';
-import 'package:dart_ng_forms/helpers/form_deps.dart';
-import 'package:dart_ng_forms/validation/form_rules.dart';
-import 'validation/validation_exception.dart';
+import 'package:dart_ng_forms/abstract_control.dart';
+import 'package:dart_ng_forms/form_control/form_control.dart';
+import 'package:dart_ng_forms/helpers/helpers.dart';
+import 'package:dart_ng_forms/validation/validation.dart';
 import 'package:result_dart/result_dart.dart';
-import 'form_control/form_control.dart';
-import 'abstract_control.dart';
 
 /// A reactive group of form controls.
 ///
@@ -94,12 +93,47 @@ abstract class FormGroup<M> extends AbstractControl<Map<String, dynamic>> {
   /// Throws if the control does not exist or if it is a nested group.
   FormControl<T> control<T>(String name) {
     final ctrl = controls[name];
-    if (ctrl == null) throw Exception('FormControl "$name" não encontrado');
+    if (ctrl == null) throw DartNgFormsException('FormControl "$name" não encontrado');
     if (ctrl is FormGroup) {
-      throw Exception(
+      throw DartNgFormsException(
           'O controle "$name" é um FormGroup, use group() para acessá-lo.');
     }
     return ctrl as FormControl<T>;
+  }
+
+  /// Returns the nested [FormGroup] with the given [name].
+  ///
+  /// Throws if the control does not exist or is not a group.
+  T group<T extends FormGroup>(String name) {
+    final ctrl = controls[name];
+    if (ctrl == null) throw DartNgFormsException('FormGroup "$name" não encontrado');
+    return ctrl as T;
+  }
+
+  /// Returns the [AbstractControl] with the given [name], supporting nested paths.
+  /// E.g. "address.street" will return the "street" control inside the "address" group.
+  /// Supports multiple levels of nesting.
+  /// Throws if any part of the path is invalid.
+  AbstractControl<T> nestedControl<T>(String name){
+    if(name.contains('.')){
+      final parts = name.split('.');
+      AbstractControl current = this;
+      for(final part in parts){
+        if(current is! FormGroup) {
+          throw DartNgFormsException('Invalid nested control path: "$name". Part "$part" is not a FormGroup.');
+        }
+        final next = current.controls[part];
+        if(next == null) {
+          throw DartNgFormsException('Control "$part" not found in FormGroup.');
+        }
+        current = next;
+      }
+      return current as AbstractControl<T>;
+    }
+    if(!contains(name)) {
+      throw DartNgFormsException('Control "$name" not found in FormGroup.');
+    }
+    return controls[name] as AbstractControl<T>;
   }
 
   /// Recursively refreshes all controls and nested groups.
@@ -112,15 +146,6 @@ abstract class FormGroup<M> extends AbstractControl<Map<String, dynamic>> {
       }
       (control as FormControl).refresh();
     }
-  }
-
-  /// Returns the nested [FormGroup] with the given [name].
-  ///
-  /// Throws if the control does not exist or is not a group.
-  T group<T extends FormGroup>(String name) {
-    final ctrl = controls[name];
-    if (ctrl == null) throw Exception('FormGroup "$name" não encontrado');
-    return ctrl as T;
   }
 
   /// Returns the current value of the group as a map.
