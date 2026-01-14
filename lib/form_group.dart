@@ -15,13 +15,13 @@ abstract class FormGroup<M> extends AbstractControl<Map<String, dynamic>> {
 
   /// The map of controls registered in this group.
   final Map<String, AbstractControl> controls;
-  bool listenValueOnly;
+  bool listenValueOnly = false;
 
   late final FormRules rules;
   late final FormDeps deps;
 
   /// Creates a [FormGroup] with the provided controls.
-  FormGroup(this.controls, {this.listenValueOnly = false}){
+  FormGroup(this.controls){
     rules = FormRules(this);
     deps = FormDeps(this);
   }
@@ -29,7 +29,7 @@ abstract class FormGroup<M> extends AbstractControl<Map<String, dynamic>> {
   /// Registers a new [control] under the given [name].
   void register(String name, AbstractControl control) {
     controls[name] = control;
-    _addListenerToControl(control);
+    _addListenerToControl(control, listenValueOnly);
   }
 
   bool _propagateChanges = false;
@@ -38,16 +38,19 @@ abstract class FormGroup<M> extends AbstractControl<Map<String, dynamic>> {
   bool get propagateChanges => _propagateChanges;
 
   /// Starts listening to all child controls' value changes to notify listeners.
-  void listenControls() {
+  void listenControls(bool listenValueOnly) {
     if (_propagateChanges) return;
     _propagateChanges = true;
-    controls.values.forEach(_addListenerToControl);
+    this.listenValueOnly = listenValueOnly;
+    for (var control in controls.values) {
+      _addListenerToControl(control, listenValueOnly);
+    }
   }
 
-  void _addListenerToControl(AbstractControl control) {
+  void _addListenerToControl(AbstractControl control, bool listenValueOnly) {
     if(!_propagateChanges) return;
     if (control is FormGroup) {
-      control.listenControls();
+      control.listenControls(listenValueOnly);
       return;
     }
     if (listenValueOnly) {

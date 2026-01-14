@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.5.11] - 2026-01-14
+
+### Changed
+
+* Added the `listenValueOnly` option to `listenControls` function to propagate only value changes.
+
 ## [1.5.10] - 2026-01-14
 
 ### Added
