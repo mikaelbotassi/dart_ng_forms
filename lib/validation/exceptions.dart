@@ -18,7 +18,7 @@ class DartNgFormsException implements Exception{
 
   @override
   String toString() {
-    if(stackTrace == null){
+    if(stackTrace != null){
       return '$runtimeType: $message\n$stackTrace';
     }
     return '$runtimeType: $message';

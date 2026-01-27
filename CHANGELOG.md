@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.5.13] - 2026-01-27
+
+### Fixed
+
+* Updated `toString` in `ValidationException` to correctly include `stackTrace` when it is not null
+
 ## [1.5.12] - 2026-01-14
 
 ### Fixed
