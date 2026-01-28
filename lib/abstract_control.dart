@@ -7,7 +7,7 @@ abstract class AbstractControl<T> extends ChangeNotifier {
   T get value;
 
   /// Whether the control's current value is valid.
-  bool get valid;
+  bool get valid => error == null;
 
   /// The error message if validation failed, or `null` if valid.
   String? get error;

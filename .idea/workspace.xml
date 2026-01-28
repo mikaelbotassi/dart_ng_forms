@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78192f81-09cb-40f1-976c-648764c49853" name="Changes" comment="refactor: add void return type to setValue and ensure recursive change notifications for nested FormGroups" />
+    <list default="true" id="78192f81-09cb-40f1-976c-648764c49853" name="Changes" comment="fix: update `ValidationException.toString` to correctly include stack trace and bump version to 1.5.13">
+      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/abstract_control.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/abstract_control.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/form_control/form_control.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/form_control/form_control.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/form_group.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/form_group.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -371,11 +379,18 @@
       <option name="project" value="LOCAL" />
       <updated>1768418641507</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="fix: update `ValidationException.toString` to correctly include stack trace and bump version to 1.5.13">
+      <option name="closed" value="true" />
+      <created>1769548778380</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1769548778380</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="chore: update version to 1.1.1 and add changelog entry for refresh function" />
     <MESSAGE value="feat: replace ValueNotifier with ControlValue for improved state management" />
     <MESSAGE value="chore: update version to 1.2.0 and document change from ValueNotifier to ControlNotifier in changelog" />
     <MESSAGE value="feat: add 'touched' option to FormControl for tracking control interaction" />
@@ -400,7 +415,8 @@
     <MESSAGE value="feat: add `listenValueOnly` option to `FormGroup` and rename `isListeningControls` to `propagateChanges`" />
     <MESSAGE value="feat: add `listenValueOnly` option to `FormGroup` and update `listenControls` method to handle value changes" />
     <MESSAGE value="refactor: add void return type to setValue and ensure recursive change notifications for nested FormGroups" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: add void return type to setValue and ensure recursive change notifications for nested FormGroups" />
+    <MESSAGE value="fix: update `ValidationException.toString` to correctly include stack trace and bump version to 1.5.13" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: update `ValidationException.toString` to correctly include stack trace and bump version to 1.5.13" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

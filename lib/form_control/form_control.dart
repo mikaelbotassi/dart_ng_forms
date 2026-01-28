@@ -76,10 +76,6 @@ class FormControl<T> extends AbstractControl<T> {
     if(notify) notifyListeners();
   }
 
-  /// Whether the control is valid (no validation errors).
-  @override
-  bool get valid => validator?.call(value) == null;
-
   /// The validation error message, if any.
   @override
   String? get error => validator?.call(value);

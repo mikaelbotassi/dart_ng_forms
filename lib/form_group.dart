@@ -246,10 +246,6 @@ abstract class FormGroup<M> extends AbstractControl<Map<String, dynamic>> {
     }
   }
 
-  /// Whether all controls in the group are valid.
-  @override
-  bool get valid => controls.values.every((c) => c.valid);
-
   /// Returns the first validation error found among the controls.
   @override
   String? get error => controls.values
