@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.5.15] - 2026-08-21
+
+### Fixed
+- Fix `FormDeps.runWithValues()` to resolve nested control paths using `FormGroup.nestedControl()`.
+- Ensure `runWithValues()` supports dot-notation paths consistently with `FormDeps.run()`, such as `"address.street"` or `"uc.medidores.medidorEntrada"`.
+
 ## [1.5.14] - 2026-01-28
 
 ### Changed
