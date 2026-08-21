@@ -72,7 +72,7 @@ class DepSubscription {
     return run(() {
       final values = <String, dynamic>{};
       for (final n in _fields) {
-        values[n] = _deps.form.control<dynamic>(n).value;
+        values[n] = _deps.form.nestedControl<dynamic>(n).value;
       }
       callback(values);
     }, runNow: runNow);
